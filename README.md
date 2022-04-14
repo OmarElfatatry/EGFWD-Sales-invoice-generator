@@ -7,4 +7,4 @@ EGFWD Sales invoice generator project (first project) which is presenting Invoic
 3-**Save File Modifications or Cancel Modifications**  
 4-**Delete Invoices Or Invoices Lines**  
 5- **Handling of wrong files extension loaded**  
-![alt text](https://github.com/OmarElfatatry/EGFWD-Sales-invoice-generator/blob/master/GUIScreenshot.png?raw=true)
+![alt text](https://github.com/OmarElfatatry/EGFWD-Sales-invoice-generator/blob/master/Screenshots/GUIScreenshot.png?raw=true)
