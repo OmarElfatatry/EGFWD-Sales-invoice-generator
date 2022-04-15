@@ -12,11 +12,16 @@ package view;
 import java.awt.Component;
 import model.InvoiceHeader;
 import java.awt.Font;
+import java.awt.Toolkit;
+import java.awt.datatransfer.DataFlavor;
+import java.awt.datatransfer.UnsupportedFlavorException;
 import java.util.ArrayList;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import java.io.*;
 import java.text.SimpleDateFormat;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.accessibility.AccessibleContext;
 import javax.swing.JButton;
 import javax.swing.JDialog;
@@ -29,6 +34,7 @@ import javax.swing.JScrollPane;
 import javax.swing.JSpinner;
 import javax.swing.JTable;
 import javax.swing.JTextField;
+import javax.swing.TransferHandler;
 public class View extends javax.swing.JFrame
 {
     javax.swing.JFileChooser openFile;
@@ -257,6 +263,7 @@ public class View extends javax.swing.JFrame
         InvoiceNumberStaticLabel.setFont(new Font("Arial", Font.BOLD, 12));
         CreatNewInvoiceButton.setFont(new Font("Arial", Font.BOLD, 12));
         DeleteInvoiceButton.setFont(new Font("Arial", Font.BOLD, 12));
+        NewItemPrice.setTransferHandler(null);
         ((JSpinner.DefaultEditor) NewItemPriceSpinner.getEditor()).getTextField().setEditable(false);
         InvoiceNumberStaticLabel.setFont(new Font("Arial", Font.BOLD, 12));
 
@@ -393,9 +400,7 @@ public class View extends javax.swing.JFrame
                                         .addGap(0, 0, Short.MAX_VALUE))
                                     .addComponent(InvoiceDateTextField)
                                     .addComponent(CustomerNameTextField)
-                                    .addGroup(RightSidePanelLayout.createSequentialGroup()
-                                        .addComponent(InvoiceTotalLabel)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                    .addComponent(InvoiceTotalLabel))
                                 .addGap(164, 164, 164))))
                     .addGroup(RightSidePanelLayout.createSequentialGroup()
                         .addGap(112, 112, 112)

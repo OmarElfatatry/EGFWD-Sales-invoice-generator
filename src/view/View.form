@@ -238,6 +238,9 @@
           </AuxValues>
         </Component>
         <Component class="javax.swing.JTextField" name="NewItemPrice">
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="NewItemPrice.setTransferHandler(null);"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JSpinner" name="NewItemPriceSpinner">
           <Properties>
@@ -494,10 +497,7 @@
                                       </Group>
                                       <Component id="InvoiceDateTextField" max="32767" attributes="0"/>
                                       <Component id="CustomerNameTextField" alignment="0" max="32767" attributes="0"/>
-                                      <Group type="102" attributes="0">
-                                          <Component id="InvoiceTotalLabel" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace min="199" max="32767" attributes="0"/>
-                                      </Group>
+                                      <Component id="InvoiceTotalLabel" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="164" pref="164" max="-2" attributes="0"/>
                               </Group>

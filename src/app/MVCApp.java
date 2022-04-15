@@ -1,6 +1,7 @@
 package app;
 
 import controller.Controller;
+import java.util.ArrayList;
 import javax.swing.JFileChooser;
 import model.InvoiceHeader;
 import model.InvoiceLine;
@@ -14,11 +15,10 @@ public class MVCApp
 {
     public static void main(String[] args) 
     {
-        InvoiceHeader invoiceHeader=new InvoiceHeader();
-        InvoiceLine   invoiceLine=new InvoiceLine();
+        ArrayList <InvoiceHeader> invoices= new ArrayList<>();
         View          view= new View();
         view.setVisible(true);
         view.setLocations();
-        Controller c= new Controller(invoiceHeader, invoiceLine, view);
+        Controller c= new Controller(invoices, view);
     }
 }

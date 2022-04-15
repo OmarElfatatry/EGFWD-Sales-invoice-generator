@@ -63,7 +63,7 @@ public class FileOperations
             clicked= view.getOpenFileJFileChooser().showOpenDialog(view);
             if(clicked == view.getOpenFileJFileChooser().APPROVE_OPTION) 
             {
-                //invoices.clear();
+                Controller.invoices.clear();
                 cancelButton=false;
                 //Fetch file name
                 fileName= view.getOpenFileJFileChooser().getSelectedFile().getName();
@@ -109,7 +109,6 @@ public class FileOperations
             clicked= view.getOpenFileJFileChooser().showOpenDialog(view);
             if(clicked == view.getOpenFileJFileChooser().APPROVE_OPTION) 
             {
-                //invoices.clear();
                 cancelButton=false;
                 //Fetch file name
                 fileName= view.getOpenFileJFileChooser().getSelectedFile().getName();
@@ -169,7 +168,7 @@ public class FileOperations
         //InvoiceHeader temporary Object to store parent header of each invoice line
         InvoiceHeader temporary=null;
         //Array list to store invoice header lines
-        ArrayList <InvoiceHeader> invoices= null;
+        ArrayList <InvoiceHeader> invoices= Controller.invoices;
        /*Start Reading Invoice Header File*/
         try
         {

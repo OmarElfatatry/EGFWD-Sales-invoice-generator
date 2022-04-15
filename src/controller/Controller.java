@@ -18,8 +18,6 @@ import view.View;
  */
 public class Controller implements ActionListener, KeyListener
 {
-    private  InvoiceHeader invoiceHeader;
-    private  InvoiceLine   invoiceLine;
     private  View          view;
     private FileOperations fileOperations;
     private LoadTablesContents loadTablesContents;
@@ -37,10 +35,9 @@ public class Controller implements ActionListener, KeyListener
     private AddItemDialogWindowListener addItemDialogWindowListener;
     private InvoiceDateTextFieldListener invoiceDateTextFieldListener;
     private CustomerNameTextFieldListener customerNameTextFieldListener;
-    public Controller(InvoiceHeader invoiceHeader,InvoiceLine invoiceLine, View view) 
+    public Controller (ArrayList<InvoiceHeader> invoices, View view) 
     {
-        this.invoiceHeader = invoiceHeader;
-        this.invoiceLine = invoiceLine;
+        this.invoices=invoices;
         this.view = view;
         fileOperations= new FileOperations(this.view);
         /*Listeners Initiation*/
@@ -104,6 +101,7 @@ public class Controller implements ActionListener, KeyListener
         {
             case "Creat New Invoice":
             {
+                System.out.println(Controller.invoices.isEmpty());
                 if(view.getFocusOwner()!=null)
                 LeftSideOperations.showCreatNewInvoiceDialog(view);
                 break;
@@ -256,7 +254,7 @@ public class Controller implements ActionListener, KeyListener
             evnt.consume();
         }
     }
-
+    
     @Override
     public void keyPressed(KeyEvent e){}
 
