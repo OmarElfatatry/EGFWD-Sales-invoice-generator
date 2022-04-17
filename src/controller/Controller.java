@@ -101,7 +101,6 @@ public class Controller implements ActionListener, KeyListener
         {
             case "Creat New Invoice":
             {
-                System.out.println(Controller.invoices.isEmpty());
                 if(view.getFocusOwner()!=null)
                 LeftSideOperations.showCreatNewInvoiceDialog(view);
                 break;
@@ -162,7 +161,7 @@ public class Controller implements ActionListener, KeyListener
                 RightSideOperations.AddNewItem(view,invoices);
                 LeftSideOperations.calculateInvoiceTableTotal(invoices);
                 LeftSideOperations.updateTableTotal(view, invoices);
-                RightSideOperations.rightSideTextUpdater(view, invoices, selectedRow);
+                RightSideOperations.rightSideTextUpdater(view, invoices, view.getInvoiceTable().getSelectedRow());
                 LoadTablesContents.loadInvoicesLineTable(view, invoices);
                 int sizeOfinvoicesLinesForTheSelectedInvoice=invoices.get(view.getInvoiceTable().getSelectedRow()).getInvoicerow().size();
                 view.getInvoicesLineTable().setRowSelectionInterval((sizeOfinvoicesLinesForTheSelectedInvoice-1), (sizeOfinvoicesLinesForTheSelectedInvoice-1));
@@ -192,7 +191,8 @@ public class Controller implements ActionListener, KeyListener
                     RightSideOperations.DeleteItem(view,invoices);
                     LeftSideOperations.calculateInvoiceTableTotal(invoices);
                     LeftSideOperations.updateTableTotal(view, invoices);
-                    RightSideOperations.rightSideTextUpdater(view, invoices, selectedRow);
+                    RightSideOperations.rightSideTextUpdater(view, invoices, view.getInvoiceTable().getSelectedRow());
+                    System.out.println(selectedRow);
                     LoadTablesContents.loadInvoicesLineTable(view, invoices);
                     int sizeOfinvoicesLinesForTheSelectedInvoice=invoices.get(view.getInvoiceTable().getSelectedRow()).getInvoicerow().size();
                     if(sizeOfinvoicesLinesForTheSelectedInvoice>0)

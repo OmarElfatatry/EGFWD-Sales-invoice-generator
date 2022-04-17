@@ -17,6 +17,7 @@ public class MVCApp
     {
         ArrayList <InvoiceHeader> invoices= new ArrayList<>();
         View          view= new View();
+        view.setExtendedState(java.awt.Frame.MAXIMIZED_BOTH);
         view.setVisible(true);
         view.setLocations();
         Controller c= new Controller(invoices, view);
