@@ -1,7 +1,7 @@
 # EGFWD-Sales-invoice-generator
 ## Simple Description
 EGFWD Sales invoice generator project (first project) which is presenting Invoices CSV files to the table 
-It's written in Java using MCV design pattern  
+It's written in Java using MVC design pattern  
 ## Features:  
 1-**Load CSV Header File Then Load CSV Invoices Lines Files**.  
 2-**Add New Invoices Header (customer name + automatic generated ID number + automatic generated date + total) And Lines (Number + Item name + Item price + Item count + Item Total)**.  
