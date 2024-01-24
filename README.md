@@ -8,5 +8,5 @@ It's written in Java using MVC design pattern
 3-**Save File Modifications or Cancel Modifications**  
 4-**Delete Invoices Or Invoices Lines**  
 5- **Handling of wrong files extension loaded**  
-[Video for the project]([https://www.google.com](https://www.linkedin.com/posts/omar-alfatatry_egfwd-project-java-activity-6921201189590048768-w4UI?utm_source=share&utm_medium=member_desktop)https://www.linkedin.com/posts/omar-alfatatry_egfwd-project-java-activity-6921201189590048768-w4UI?utm_source=share&utm_medium=member_desktop)
+[Video for the project](https://www.linkedin.com/posts/omar-alfatatry_egfwd-project-java-activity-6921201189590048768-w4UI?utm_source=share&utm_medium=member_desktop)
 ![alt text](https://github.com/OmarElfatatry/EGFWD-Sales-invoice-generator/blob/master/Screenshots/GUIScreenshot.png?raw=true)
